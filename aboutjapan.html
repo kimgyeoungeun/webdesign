@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>japan</title>
+    <link rel="stylesheet" href="about.css">
+
+</head>
+<body>
+    <header>
+        <a href="japan.html"><img src="page/logo.png" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="travel.html">Travel items</a></li>
+                <li><a href="aboutjapan.html">About japan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img src="page/doton.jpg" class="doton" id="dotonImage">
+            <img src="page/tokyo.jpg" class="sibuya">
+            <img src="page/gyoto.jpg" class="three">
+            <img src="page/otaru.jpg" class="otaru">
+            <img src="page/sibuya.jpg" class="night">
+        </section>
+        <section></section>
+        <h1>
+            <span>벚꽃, 야경, 자연, 고유의 문화 모든 게 어우러져 있는 일본</span><br>
+            <span>함께 구경하러 가봐요!</span>
+        </h1>
+        <section>
+            <div class="go"><a href="japan.html">GO!</a></div>
+        </section>
+    </main>
+    <script>
+        window.addEventListener('scroll', function() {
+            var image = document.getElementById('dotonImage');
+            var scrollPosition = window.scrollY;
+            var windowHeight = window.innerHeight;
+
+            var blurValue = Math.min(scrollPosition / windowHeight * 3, 4);
+            image.style.filter = 'blur(' + blurValue + 'px)';
+            var darkenValue = Math.max(1 - (scrollPosition / windowHeight), 0.3);
+            image.style.filter += ' brightness(' + darkenValue + ')';
+        });
+    </script>
+</body>
+</html>
